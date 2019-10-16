@@ -1,0 +1,521 @@
+@import "./Variables.scss";
+@import "./extend.scss";
+header {
+  border-bottom: 2px solid $orange;
+
+  .navbar {
+    width: 100%;
+    padding: 0rem 1rem;
+    background-color: $white !important;
+    .navbar-brand {
+      padding: 0;
+      img {
+        max-height: 45px;
+      }
+    }
+    .navbar-nav {
+      a {
+        color: $orange !important;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 16px !important;
+        font-size: 17px;
+        -webkit-transition: color 0.15s;
+        transition: color 0.15s;
+        &:after {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        a {
+          padding: 0 10px !important;
+          font-size: 14px;
+        }
+      }
+      .ad {
+        padding: 20px 16px;
+        position: relative;
+        .nav-link {
+          background-color: transparent;
+          border: 0;
+          border-radius: 2px;
+          font-size: 14px;
+          height: 24px;
+          line-height: 24px;
+          padding: 0 !important;
+          vertical-align: middle;
+          z-index: 0;
+          &:hover {
+            background-color: rgba(251, 129, 63, 0.1);
+          }
+        }
+        &:before {
+          content: "";
+          bottom: 16px;
+          float: left;
+          height: 32px;
+          left: 0;
+          position: absolute;
+          top: 16px;
+          width: 1px;
+          background: rgba(0, 0, 0, 0.15);
+        }
+      }
+      .dropdown {
+        &:hover {
+          .dropdown-menu {
+            display: block !important;
+          }
+        }
+        .dropdown-menu {
+          background-color: $white;
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 6px 9px rgba(0, 0, 0, 0.2);
+          border-radius: 0 0 2px 2px;
+          padding: 4px 0;
+          width: 272px;
+          border: 0;
+          left: 0;
+          top: 62px;
+          &:after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: block;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: -8px;
+            background: $white;
+            transform: rotate(45deg);
+            left: 50px;
+            border-width: 1px 0px 0 1px;
+          }
+          .dropdown-item {
+            border: 0;
+            line-height: 32px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.55);
+            font-size: 15px;
+            display: block;
+            height: 32px;
+            padding: 0 16px !important;
+            &:hover {
+              color: $orange !important;
+            }
+          }
+        }
+        @media screen and (max-width: 992px) {
+          .dropdown-menu {
+            width: 225px;
+            .dropdown-item {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .navbar {
+      padding: 10px 15px !important;
+      .navbar-collapse {
+        position: absolute;
+        top: 67px;
+        background: #fff;
+        z-index: 111;
+        left: 0;
+        right: 0;
+        padding: 6px 0;
+        border-bottom: 2px solid #fb813f;
+        .navbar-nav {
+          a {
+            height: 33px;
+            line-height: 34px;
+            text-align: left;
+          }
+          .ad {
+            padding: 6px 11px 0;
+            &:before {
+              content: "";
+              bottom: auto;
+              height: 1px;
+              top: 0;
+              width: 100%;
+            }
+            a {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .navbar-toggler {
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+}
+.banner-section {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    img {
+      min-height: 200px;
+      object-fit: cover;
+    }
+  }
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    .banner-content-container {
+      h1 {
+        color: $white;
+        line-height: 72px;
+        font-weight: 300;
+        font-size: 66px;
+        font-family: $font-pt;
+        margin: 0;
+      }
+      @media screen and (max-width: 767px) {
+        h1 {
+          font-size: 30px !important;
+          margin-bottom: 5px;
+        }
+      }
+      p {
+        line-height: 32px;
+        font-weight: 300;
+        color: $banner-p-col;
+        font-size: 26px;
+        font-family: $font-pt;
+        margin: 0;
+      }
+      .banner-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .banner-action {
+          @extend %button;
+          background: $white-btn-bg;
+          color: $black;
+          margin: 12px 8px 0px;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        h1 {
+          font-size: 40px;
+          line-height: normal;
+        }
+        p {
+          font-size: 18px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+.parbase-section {
+  padding: $padding-top-bot;
+  background-color: $parbase-bg;
+  padding-bottom: 64px;
+  h4 {
+    font-size: $font-s-26;
+    color: $dark-grey;
+    font-weight: 300;
+    padding: $padding-top-bot;
+  }
+  img {
+    width: 72px;
+    margin: 0 auto 0;
+  }
+  .card {
+    border: 1px solid $light-grey-border;
+    padding: $padding-top-bot;
+    .card-title {
+      font-size: $font-s-20;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 0;
+    }
+    p {
+      font-size: $card-text;
+      line-height: 24px;
+      margin-top: 10px;
+      color: $dark-grey;
+      min-height: 100px;
+      a {
+        color: $orange;
+        text-decoration: none;
+      }
+    }
+    .card-btn {
+      @extend %button;
+      background-color: $card-btn-bg;
+      color: $dark-grey;
+      &:hover {
+        background-color: $card-btn-bg-hover;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    h4 {
+      font-size: $font-s-20;
+    }
+    .card {
+      .card-title {
+        font-size: $font-s-15;
+        line-height: 17px;
+      }
+      p {
+        font-size: $font-s-13;
+        line-height: 15px;
+      }
+      .card-body {
+        padding-bottom: 0;
+      }
+      .card-btn {
+        font-size: $font-s-13;
+        line-height: 15px;
+      }
+    }
+  }
+}
+.create-Title {
+  margin: 5px 0;
+  h4 {
+    @extend %home-heading;
+    span {
+      @extend %home-heading-span;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    h4 {
+      font-size: 25px;
+      line-height: 28px;
+    }
+  }
+}
+.create-ad {
+  position: relative;
+  padding: $padding-top-bot;
+  .rich-text {
+    .top-section {
+      @extend %button-effects;
+      &:before,
+      &:after {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: $orange;
+        left: 0;
+        transition-duration: 0.3s;
+      }
+      &:before {
+        top: 0;
+        width: 15%;
+      }
+      &:after {
+        bottom: 0;
+        width: 40%;
+      }
+      span {
+        @extend %button-effects-span;
+        &:before,
+        &:after {
+          content: "";
+          width: 2px;
+          height: 0;
+          position: absolute;
+          transition: all 0.2s linear;
+          background: $orange;
+          top: 50%;
+          transition-duration: 0.3s;
+        }
+        &:before {
+          top: 0;
+          height: 100%;
+          left: 0;
+        }
+        &:after {
+          right: 0;
+        }
+      }
+      &:hover {
+        &:before,
+        &:after {
+          width: 100%;
+          left: 0;
+        }
+        span {
+          &:after {
+            height: 100%;
+            top: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .top-section {
+        font-size: 12px;
+        span {
+          padding: 9px 25px;
+        }
+      }
+    }
+  }
+  .bottom-contect {
+    padding: $padding-top-bot;
+    @media screen and (max-width: 992px) {
+      padding: $padding-top-bot992;
+    }
+    h2 {
+      line-height: 35px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 24px;
+      font-weight: 400;
+      color: $text;
+      font-size: $card-text;
+    }
+    .card-btn {
+      font-weight: 400;
+      color: $orange;
+      font-size: $font-s-15;
+      text-decoration: none;
+    }
+    @media screen and (max-width: 992px) {
+      h2 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      p {
+        font-size: $card-text992;
+        line-height: 18px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .cnt-section {
+    padding: $padding-top-bot;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.goal {
+  padding: 0;
+  background-color: #fff;
+  img {
+    max-height: 56px;
+    width: auto;
+  }
+}
+
+.business-section {
+  padding: $padding-top-bot;
+  background-color: $orange;
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    line-height: 48px;
+    font-weight: 200;
+    color: $white;
+    font-size: 30px;
+  }
+  button {
+    @extend %button;
+    background-color: $white;
+    color: $black;
+    margin-left: 15px;
+  }
+  @media screen and (max-width: 767px) {
+    button {
+      margin: 15px 0 0;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    h3 {
+      line-height: normal;
+      font-size: 23px;
+      margin: 0;
+      padding: 0 15px;
+    }
+  }
+}
+
+footer {
+  padding: $padding-top-bot;
+  padding-bottom: 0;
+  p {
+    width: 100%;
+    &.copy-right {
+      margin: 0;
+      padding: 10px 0;
+      font-size: 12px;
+      color: $copyright-color;
+      background-color: $copyright-bg;
+      margin-top: 40px;
+    }
+    a {
+      color: $orange;
+      margin: 20px 0;
+      opacity: 0.8;
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+  }
+  .list-group {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0 0;
+    a {
+      border: 0;
+      padding: 0;
+      margin: 0 15px;
+      color: $footer-link;
+      font-size: $footer-font-s-15;
+      &:hover {
+        color: $footer-link-hover;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .create-ad {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-top-bot992;
+    img {
+      order: 2;
+    }
+    .cnt-section {
+      order: 1;
+      position: unset;
+    }
+  }
+}

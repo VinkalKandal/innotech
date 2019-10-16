@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bab5a77b.chunk.css",
+    "main.js": "/static/js/main.f0df3bb1.chunk.js",
+    "main.js.map": "/static/js/main.f0df3bb1.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.c76f8040.js",
+    "runtime~main.js.map": "/static/js/runtime~main.c76f8040.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.6c70c5f9.chunk.js": "/static/js/2.6c70c5f9.chunk.js",
+    "static/js/2.6c70c5f9.chunk.js.map": "/static/js/2.6c70c5f9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ce73c7d1aa8165b7628af9a2a40d6b39.js": "/precache-manifest.ce73c7d1aa8165b7628af9a2a40d6b39.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.bab5a77b.chunk.css.map": "/static/css/main.bab5a77b.chunk.css.map",
+    "static/media/2-lms-inmail.jpg": "/static/media/2-lms-inmail.bb239814.jpg",
+    "static/media/2-lms-spon-content.jpg": "/static/media/2-lms-spon-content.2e10d0e6.jpg",
+    "static/media/2-lms-text-ads.jpg": "/static/media/2-lms-text-ads.5b764617.jpg",
+    "static/media/logo.png": "/static/media/logo.a7e4f9d6.png",
+    "static/media/megan-w-banner-v2-tab-landv02.jpg": "/static/media/megan-w-banner-v2-tab-landv02.88f35fe1.jpg"
+  }
+}
